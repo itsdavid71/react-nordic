@@ -422,7 +422,7 @@
 						.technologies-blocks-attention {
 							border: 3px solid #fdc931;
 							box-sizing: border-box;
-							/* overflow: hidden; */
+							overflow: hidden;
 							padding: 40px 80px;
 							background: #fff;
 							color: #2a284f;
@@ -434,15 +434,43 @@
 							box-shadow: 5px 2px 11px 4px #fdca312f;
 
 						}
-						.technologies-blocks-attention:before {
+						/* .technologies-blocks-attention:before {
 							content: "!";
 							position: absolute;				
 							font-size: 13rem;
 							color: #fdc931;
 							right: -60px;
     					top: -60px;
+						} */
+						.technologies-blocks-attention:before {
+							position: absolute;
+							content: "";
+							/* top: -100px; */
+							right: -5px;
+							width: 0;
+							top: 0;
+							bottom: 0;
+							height: 0;
+							border-radius: 200px;
+							background: #fdc931;
+							transition: .3s;
+						}
+						.technologies-blocks-attention:hover:before {
+							transform: scale(40);
+							width: 10px;
+							height: 10px;
 						}
 						.technologies-blocks-attention:after {
+							position: absolute;
+							content: "";
+							background: url(warning.svg) center center / contain no-repeat;
+							margin: 0 auto;
+							top: 0;
+							bottom: 0;
+							right: 60px;
+							padding: 50px;
+						}
+						/* .technologies-blocks-attention:after {
 							position: absolute;
 							content: "";
 							width: 100%;
@@ -452,7 +480,7 @@
 							right: 0;
 							margin: 0 auto;
 							top: -25px;
-						}
+						} */
 						.technologies-blocks-attention span:first-child {
 							font-size: 30px;
 							position: relative;
@@ -471,6 +499,7 @@
 							background: #ff3a3a;
 							color: white;
 							padding: 2px 5px;
+							white-space: nowrap;
 							margin: 0 5px;
 						}
 						.technologies-blocks-blue {
@@ -518,6 +547,9 @@
 						}
 						.jcc {
 							justify-content: center;
+						}
+						.jcsa {
+							justify-content: space-around;
 						}
 						.aic {
 							align-items: center;
@@ -717,18 +749,178 @@
 							z-index: -1;
 							bottom: -10px;
 							left: 0;
-
 						}
+						.technologies-info-title {
+							display: none;
+						}
+						.technologies-blocks-connect {
+							width: 100px;
+							height: 200px;
+							position: absolute;
+							z-index: -1;
+							top: -130px;
+							border: 3px solid #2a284f;
+							border-right: transparent;
+							/* border-radius: 50px; */
+							left: -30px;
+						}
+						.technologies-blocks-connect::before {
+							content: "";
+							position: absolute;
+							width: 20px;
+							height: 20px;
+							background:#2a284f;
+							border-radius: 50px;
+							z-index: 1;
+							top: -10px;
+							left: 15px;
+						}
+						.technologies-blocks-connect::after {
+							content: "";
+							position: absolute;
+							width: 20px;
+							height: 20px;
+							background:#2a284f;
+							border-radius: 50px;
+							z-index: 1;
+							bottom: -10px;
+							left: 15px;
+						}
+
+						.technologies-blocks-connect-2 {
+							width: 100px;
+							height: 200px;
+							position: absolute;
+							z-index: -1;
+							top: -130px;
+							border: 3px solid #2a284f;
+							border-left: transparent;
+							/* border-radius: 50px; */
+							right: -30px;
+						}
+						.technologies-blocks-connect-2::before {
+							content: "";
+							position: absolute;
+							width: 20px;
+							height: 20px;
+							background:#2a284f;
+							border-radius: 50px;
+							z-index: 1;
+							top: -10px;
+							right: 22px;
+						}
+						.technologies-blocks-connect-2::after {
+							content: "";
+							position: absolute;
+							width: 20px;
+							height: 20px;
+							background:#2a284f;
+							border-radius: 50px;
+							z-index: 1;
+							bottom: -10px;
+							right: 15px;
+						}
+
+						@media (max-width: 1223px) {
+							.big-question-text {
+									padding-bottom: 50px;
+							}
+						}
+						@media (max-width: 727px) {
+							.technologies-blocks-attention:after {
+								display: none;
+							}
+						}
+						@media (max-width: 867px) {
+							.technologies-info::before {
+								top: 80px;
+							}
+							.technologies-blocks-attention:hover:before {
+								display: none;
+							}
+							.technologies-blocks-blue-skill {
+								flex-basis: 300px;
+							}
+						}
+						@media (max-width: 673px) {
+							.technologies-blocks-attention span:first-child::before {
+								display: none;
+							}
+							.technologies-blocks-blue-button {
+									position: unset;								
+									background: #2a284f;
+									cursor: pointer;
+									color: white;
+									margin: 13px 0;
+									max-width: 150px;
+									display: block;
+									transition: .3s;
+							}
+						}
+						@media (max-width: 623px) {
+							.technologies-info::before {
+								top: 100px;
+							}
+						}
+						@media (max-width: 513px) {
+							.technologies-info::before {
+								display: none;
+							}
+							.technologies-info-title {
+								display: block;
+								text-align: center;
+								padding: 20px;
+								font-family: "Roboto Condensed";
+								color: #2a284f;
+								font-size: 30px;
+							}
+						}
+						@media (max-width: 447px) {
+							.big-question-text {
+								padding: 20px 0;
+							}
+							.technologies-blocks-attention-red {
+								margin: 5px 5px 5px 0;
+							}
+							.big-question-text .one {
+								font-size: 4rem !important;
+								line-height: 0px !important;
+							}
+							.big-question-text .two {
+								font-size: 5rem !important;
+							}
+							.big-question-text .three {
+								font-size: 8rem !important;
+								line-height: 40px !important;
+							}
+							.big-question-text .one::before {
+								display: none;
+							}
+						}
+
 
 			
 
 
 		</style>
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta http-equiv="X-UA-Compatible" content="ie=edge">
+			<title>Docsssument</title>
+			<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+
+		</head>
+		<body>
+			
+		</body>
+		</html>
 
         <section id="technologies" >
             <div class="technologies-full-info">
-                <div class="flex wrap">
+                <div class="flex wrap jcsa">
 									<div class="big-question">
 										<div class="big-question-text">
 											<span class="one">Для</span><br> <span class="two">Кого</span><br> <span class="three">Курс</span>
@@ -737,10 +929,11 @@
 									</div>
 									<div class="technologies-blocks">
 										<div class="technologies-blocks-attention" style="max-width: 730px;">
-											<span>Внимание</span> <br><span>Курс по React</span><span class="technologies-blocks-attention-red">не подходит</span></span>для новичков в web-разработке</span>
+											<span>Внимание</span> <br><span>Курс по React </span><span class="technologies-blocks-attention-red">не подходит</span><span style="z-index: 99999;">для новичков в web-разработке</span>
 										</div>
-										<div class="technologies-blocks-blue" style="right: -150px; max-width: 730px;" >
-											<div class="flex jcc aic">
+										<div class="technologies-blocks-blue" style="max-width: 730px;" >
+											<div class="technologies-blocks-connect"></div>
+											<div class="flex jcc aic wrap">
 													<div class="technologies-blocks-blue-rocket"></div>
 													<div class="technologies-blocks-blue-text">
 														<span class="technologies-blocks-blue-text-first">Требуется подготовка по курсу:</span><br>
@@ -750,9 +943,10 @@
 		
 											</div>
 										</div>
-										<div class="technologies-blocks-blue" style="right: -300px; padding: 20px;">
+										<div class="technologies-blocks-blue" style=" padding: 20px;">
+											<div class="technologies-blocks-connect-2"></div>
 											<div class="tac" style="font-size: 20px; font-weight: 400;">Необходимы знания по технологиям:</div>
-											<div class="technologies-blocks-blue-skills flex">
+											<div class="technologies-blocks-blue-skills flex wrap jcc">
 												<div class="technologies-blocks-blue-skill">
 													<div class="technologies-blocks-blue-skill-logo technologies-blocks-blue-skill-html"></div>
 													<div class="technologies-blocks-blue-skill-title">
@@ -785,6 +979,7 @@
 										</div>
 									</div>
 								</div>
+								<h3 class="technologies-info-title">Что вас ждет?</h3>
 								<div class="technologies-info">
 									<div class="technologies-info-right">По окончания курса вы освоите frontend-фреймворк React, поймете его философию, преимущества и ограничения. Вы сможете создать сайт на React с нуля или подключиться к проекту на данной технологии.</div>
 									<div class="technologies-info-left">По ходу обучения будет много практики, разбор хороших и плохих примеров использования React. Будут даны важные советы и практики разработки на React. По окончанию курса вы реализуете свой проект.
