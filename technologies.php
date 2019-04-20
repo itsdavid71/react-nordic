@@ -463,7 +463,7 @@
 						.technologies-blocks-attention:after {
 							position: absolute;
 							content: "";
-							background: url(warning.svg) center center / contain no-repeat;
+							background: url(images/warning.svg) center center / contain no-repeat;
 							margin: 0 auto;
 							top: 0;
 							bottom: 0;
@@ -528,7 +528,7 @@
 							top: -25px;
 						}
 						.technologies-blocks-blue-rocket {
-							background: url(startup.svg) center center / contain no-repeat;
+							background: url(images/startup.svg) center center / contain no-repeat;
 							padding: 40px;
 							position: relative;
 							transition: .3s;
@@ -612,16 +612,16 @@
 						}
 						
 						.technologies-blocks-blue-skill-html {
-							background: url(html-5.svg) center center / contain no-repeat;
+							background: url(images/html-5.svg) center center / contain no-repeat;
 						}
 						.technologies-blocks-blue-skill-css {
-							background: url(css-3.svg) center center / contain no-repeat;
+							background: url(images/css-3.svg) center center / contain no-repeat;
 						}
 						.technologies-blocks-blue-skill-js {
-							background: url(Javascript.svg) center center / contain no-repeat;
+							background: url(images/Javascript.svg) center center / contain no-repeat;
 						}
 						.technologies-blocks-blue-skill-ajax {
-							background: url(AJAX.svg) center center / contain no-repeat;
+							background: url(images/AJAX.svg) center center / contain no-repeat;
 						}
 						.technologies-blocks-blue-skill {
 							display: flex;
